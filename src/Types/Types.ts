@@ -1,4 +1,4 @@
-export type AllowedPaths = "/" | "/about" | "/projects" | "/contact" | "/faq";
+export type AllowedPaths = "/" | "#about" | "#projects" | "#contact" | "#faq";
 
 export type Route = {
     path: AllowedPaths;
@@ -7,6 +7,7 @@ export type Route = {
 
 
 export type ProjectSettings = {
+    BASE_URL: string,
     PROJECT_NAME: string;
     IS_DEV_MODE: boolean;
 };

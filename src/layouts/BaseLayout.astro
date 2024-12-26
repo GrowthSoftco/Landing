@@ -1,3 +1,13 @@
+---
+import { PROJECT_SETTINGS } from "@Utils/settings";
+import Navbar from "@Components/Navbar/Navbar.astro"
+
+interface Props {
+	titlePage?: string;
+}
+
+const { titlePage } = Astro.props;
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,9 +15,10 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Growth | { titlePage? titlePage : PROJECT_SETTINGS.PROJECT_NAME }</title>
 	</head>
-	<body>
+	<body class="bg-secondary">
+		<Navbar />
 		<slot />
 	</body>
 </html>

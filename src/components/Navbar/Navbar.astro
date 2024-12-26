@@ -1,0 +1,26 @@
+---
+import { PROJECT_ROUTES } from "@Utils/settings"
+import LogoWhite from "@Assets/icons/LogoWhite.svg";
+---
+
+<nav class="flex justify-between absolute py-6 px-10 w-full z-10 items-center">
+    <a href="/">
+        <img src={LogoWhite.src} alt="GrowthLogo" class="h-8 md:h-10">
+    </a>
+
+    <ul class="hidden md:flex gap-[100px]">
+        {
+            PROJECT_ROUTES?.map(({path, name}) => (
+                <li class="text-neutral-400 hover:text-text content-center text-md font-geist">
+                    <a href={path}>{name}</a>
+                </li>
+            ))
+        }
+    </ul>
+
+    <a href="/sign-in" class="content-center">
+        <span class="border py-[10px] px-5 rounded-l-lg rounded-tr-none rounded-br-lg bg-white text-center font-geist font-semibold">
+            Sign in
+        </span>
+    </a>
+</nav>

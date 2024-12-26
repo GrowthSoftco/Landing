@@ -1,0 +1,17 @@
+---
+import WaterM from "./WaterM.astro";
+import ShapeHandler from "@Components/Hero/ShapeHandler.astro";
+import MainCTA from "@Components/Hero/MainCTA.astro";
+---
+
+<section class="bg-black h-screen md:p-2">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-2 h-full">
+    <div class="h-full rounded-lg  bg-secondary flex items-center justify-center">
+        <WaterM />
+        <MainCTA />
+    </div>
+    <div class="h-full rounded-lg hidden md:block">
+        <ShapeHandler />
+    </div>
+    </section>
+</section>
