@@ -1,6 +1,7 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import { PROJECT_SETTINGS } from '@Utils/settings';
+import astroLogo from '@Assets/icons/astro.svg';
+import background from '@Assets/images/background.svg';
 ---
 
 <div id="container">
@@ -23,6 +24,7 @@ import background from '../assets/background.svg';
 						></path></svg
 					>
 				</a>
+				<h1>{ PROJECT_SETTINGS.IS_DEV_MODE ? "DEV MODE ON" : "DEV MODE OFF"}</h1>
 			</section>
 		</section>
 	</main>
